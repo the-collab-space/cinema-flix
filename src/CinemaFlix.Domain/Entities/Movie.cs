@@ -14,11 +14,11 @@ namespace CinemaFlix.Domain.Entities
         public DateTime ReleaseDate { get; set; }
         public TimeSpan Duration { get; set; }
         public DateTime AnnouciamentDate { get; set; }
-        public List<Character> Characters { get; set; }
-        public List<Genre> Genres { get; set; }
-        public List<Language> Idiomas { get; set; }
-        public List<Picture> Gallery { get; set; }
-        public List<Director> Directors { get; set; }
+        public List<Character> Characters { get; set; } = new List<Character>();
+        public List<Genre> Genres { get; set; } = new List<Genre>();
+        public List<Language> Idiomas { get; set; } = new List<Language>();
+        public List<Picture> Gallery { get; set; } = new List<Picture>();
+        public List<Director> Directors { get; set; } = new List<Director>();
 
     }
 }

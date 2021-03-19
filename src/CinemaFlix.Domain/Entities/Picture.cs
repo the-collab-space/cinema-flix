@@ -1,12 +1,14 @@
-﻿using System;
+﻿using CinemaFlix.Domain.Common;
+using System;
 
 namespace CinemaFlix.Domain.Entities
 {
-    public class Picture
+    public class Picture : Entity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
-        public bool Thumbnail { get; set; }
-        public int MyProperty { get; set; }
+        public bool? Thumbnail { get; set; }
+        public Movie Movie { get; set; }
+        public Guid MovieId { get; set; }
+        public Actor Actor { get; set; }
     }
 }

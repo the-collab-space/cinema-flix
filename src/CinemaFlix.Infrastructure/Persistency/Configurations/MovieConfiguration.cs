@@ -23,7 +23,7 @@ namespace CinemaFlix.Infrastructure.Persistency.Configurations
                  .IsRequired(false);
 
             builder.Property(t => t.Description)
-               .HasMaxLength(300)
+               .HasMaxLength(500)
                .IsRequired(false);
 
             builder.Property(t => t.AnnouciamentDate)

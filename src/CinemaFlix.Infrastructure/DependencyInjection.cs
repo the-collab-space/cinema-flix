@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CinemaFlix.Infrastructure.Persistency;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +14,8 @@ namespace CinemaFlix.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped(typeof(IRepository<>), typeof(EntityRepository<>));
+            //TODO: CreateRepository Pattern
+            //services.AddScoped(typeof(IRepository<>), typeof(EntityRepository<>));
 
             return services;
         }

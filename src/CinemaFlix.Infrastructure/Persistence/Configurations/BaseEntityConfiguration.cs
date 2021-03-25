@@ -2,7 +2,7 @@
 using CinemaFlix.Domain.Common;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CinemaFlix.Infrastructure.Persistency.Configurations
+namespace CinemaFlix.Infrastructure.Persistence.Configurations
 {
     public class BaseEntityConfiguration<T> : IEntityTypeConfiguration<T> where T : Entity
     {

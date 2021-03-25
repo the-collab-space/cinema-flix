@@ -1,7 +1,7 @@
 ﻿using CinemaFlix.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CinemaFlix.Infrastructure.Persistency.Configurations
+namespace CinemaFlix.Infrastructure.Persistence.Configurations
 {
     public class UserConfiguration : BaseEntityConfiguration<User>
     {

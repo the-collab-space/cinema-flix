@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaFlix.Infrastructure.Persistency.Configurations
+namespace CinemaFlix.Infrastructure.Persistence.Configurations
 {
     public class ActorConfiguration : BaseEntityConfiguration<Actor>
     {

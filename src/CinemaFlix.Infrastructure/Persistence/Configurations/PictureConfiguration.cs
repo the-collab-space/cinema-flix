@@ -15,12 +15,6 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
 
             builder.Property(p => p.Thumbnail)
                 .IsRequired(false);
-
-            builder.HasOne(p => p.Actor)
-                .WithMany(a => a.Pictures);
-            
-            builder.HasOne(p => p.Movie)
-                .WithMany(m => m.Pictures);
         }
     }
 }

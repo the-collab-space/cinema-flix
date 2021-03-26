@@ -15,7 +15,7 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
                 .IsRequired();
 
             builder.Property(t => t.Rating)
-                 .HasColumnType("float(5, 2)")
+                 .HasColumnType("NUMERIC(2,1)")
                  .IsRequired(false);
 
             builder.Property(t => t.Sinopse)
@@ -36,7 +36,8 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
                 .IsRequired(false);
 
             builder.HasMany(p => p.Pictures)
-                .WithOne(p => p.Movie);
+                .WithOne(p => p.Movie)
+                .HasForeignKey(m =>m.MovieId);
 
             builder.HasMany(p => p.Genres)
                 .WithMany(p => p.Movies);

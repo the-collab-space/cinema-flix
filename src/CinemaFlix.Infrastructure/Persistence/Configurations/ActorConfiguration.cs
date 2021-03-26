@@ -30,10 +30,8 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
                .IsRequired(false);
 
             builder.HasMany(a => a.Pictures)
-                .WithOne(p => p.Actor);
-
-            builder.HasMany(a => a.Movies)
-                .WithMany(a => a.Actors);
+                .WithOne(p => p.Actor)
+                .HasForeignKey(a => a.ActorId);
 
             builder.HasMany(a => a.Characters)
                 .WithMany(a => a.Actors);

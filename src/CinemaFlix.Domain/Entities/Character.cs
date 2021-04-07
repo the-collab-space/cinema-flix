@@ -1,14 +1,14 @@
 ﻿using CinemaFlix.Domain.Common;
-using System;
 using System.Collections.Generic;
+using CinemaFlix.Domain.ValueObjects;
 
 namespace CinemaFlix.Domain.Entities
 {
     public class Character : Entity
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public ICollection<Movie> Movies { get; set; } = new List<Movie>();
-        public ICollection<Actor> Actors { get; set; } = new List<Actor>();
+        public Name Name { get; private set; }
+        public string Description { get; private set; }
+        public ICollection<Movie> Movies { get; private set; } = new List<Movie>();
+        public ICollection<Actor> Actors { get; private set; } = new List<Actor>();
     }
 }

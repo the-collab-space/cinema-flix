@@ -16,9 +16,6 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
             builder.Property(d => d.Description)
                 .HasMaxLength(500)
                 .IsRequired(false);
-
-            builder.HasMany(d => d.Movies)
-                .WithMany(m => m.Directors);
         }
     }
 }

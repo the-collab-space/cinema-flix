@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CinemaFlix.Infrastructure.Persistence.Repositories
 {
-    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
     {
         protected readonly ApplicationDbContext Context;
         protected readonly DbSet<TEntity> DbSet;

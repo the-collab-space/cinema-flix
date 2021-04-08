@@ -1,4 +1,5 @@
 ﻿using CinemaFlix.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CinemaFlix.Infrastructure.Persistence.Configurations
@@ -9,13 +10,20 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
         {
             base.Configure(builder);
 
-            builder.Property(u => u.Email)
+            builder.OwnsOne(u => u.Email)
+                .Property(x => x.Address)
                 .HasMaxLength(300)
-                .IsRequired();
+                .HasColumnName("Email"); ;
 
-            builder.Property(u => u.Name)
-                .HasMaxLength(200)
-                .IsRequired();
+            builder.OwnsOne(u => u.Name)
+                .Property(x => x.FirstName)
+                .HasMaxLength(250)
+                .HasColumnName("FirstName");
+
+            builder.OwnsOne(u => u.Name)
+                .Property(x => x.LastName)
+                .HasMaxLength(150)
+                .HasColumnName("LastName");
 
             builder.Property(u => u.CreationDate)
                 .IsRequired(false);

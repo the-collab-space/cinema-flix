@@ -15,9 +15,15 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
         {
             base.Configure(builder);
 
-            builder.Property(a => a.Name)
-              .HasMaxLength(200)
-              .IsRequired();
+            builder.OwnsOne(u => u.Name)
+                .Property(x => x.FirstName)
+                .HasMaxLength(250)
+                .HasColumnName("FirstName");
+
+            builder.OwnsOne(u => u.Name)
+                .Property(x => x.LastName)
+                .HasMaxLength(150)
+                .HasColumnName("LastName");
 
             builder.Property(a => a.Description)
                .HasMaxLength(500)

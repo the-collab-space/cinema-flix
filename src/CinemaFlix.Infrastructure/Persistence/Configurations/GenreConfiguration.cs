@@ -9,7 +9,7 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
         {
             base.Configure(builder);
 
-            builder.Property(g => g.Name)
+            builder.Property(g => g.Type)
                 .HasMaxLength(200)
                 .IsRequired();
 

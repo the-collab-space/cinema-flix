@@ -13,7 +13,7 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
                 .HasMaxLength(200)
                 .IsRequired();
 
-            builder.Property(l => l.Iso_639_1)
+            builder.Property(l => l.Code)
                 .HasMaxLength(500)
                 .IsRequired();
         }

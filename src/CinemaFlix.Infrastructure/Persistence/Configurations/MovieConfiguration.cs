@@ -10,7 +10,7 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
         {
             base.Configure(builder);
 
-            builder.Property(t => t.Name)
+            builder.Property(t => t.Title)
                 .HasMaxLength(200)
                 .IsRequired();
 
@@ -18,7 +18,7 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
                  .HasColumnType("NUMERIC(2,1)")
                  .IsRequired(false);
 
-            builder.Property(t => t.Sinopse)
+            builder.Property(t => t.Synopsis)
                  .HasMaxLength(1000)
                  .IsRequired(false);
 
@@ -26,7 +26,7 @@ namespace CinemaFlix.Infrastructure.Persistence.Configurations
                .HasMaxLength(500)
                .IsRequired(false);
 
-            builder.Property(t => t.AnnouciamentDate)
+            builder.Property(t => t.Announcement)
                .IsRequired(false);
 
             builder.Property(t => t.Duration)

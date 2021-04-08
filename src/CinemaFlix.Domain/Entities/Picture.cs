@@ -5,11 +5,11 @@ namespace CinemaFlix.Domain.Entities
 {
     public class Picture : Entity
     {
-        public string Description { get; set; }
-        public bool? Thumbnail { get; set; }
-        public Movie Movie { get; set; }
-        public Guid MovieId { get; set; }
-        public Actor Actor { get; set; }
-        public Guid ActorId { get; set; }
+        public string Description { get; private set; }
+        public bool? Thumbnail { get; private set; }
+        public Movie Movie { get; private set; }
+        public Guid? MovieId { get; private set; }
+        public Actor Actor { get; private set; }
+        public Guid? ActorId { get; private set; }
     }
 }

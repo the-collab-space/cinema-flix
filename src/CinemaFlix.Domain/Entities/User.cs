@@ -9,6 +9,7 @@ namespace CinemaFlix.Domain.Entities
     public class User : Entity
     {
         private readonly IList<Movie> _movies;
+        protected User() { }
         public User(Name name, Email email)
         {
             Name = name;

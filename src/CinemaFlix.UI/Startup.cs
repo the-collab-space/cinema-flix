@@ -22,6 +22,7 @@ namespace CinemaFlix.UI
         {
             services.AddRazorPages();
             services.AddInfrastructure(Configuration, Environment);
+            services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -29,7 +30,7 @@ namespace CinemaFlix.UI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseMigrationsEndPoint();
             }
             else
             {

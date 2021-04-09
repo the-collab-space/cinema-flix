@@ -1,24 +1,23 @@
-﻿using System;
+﻿using CinemaFlix.Domain.Common;
+using System;
 using System.Collections.Generic;
 
 namespace CinemaFlix.Domain.Entities
 {
-    public class Movie
+    public class Movie : Entity
     {
-        
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Sinopse { get; set; }
-        public string Description { get; set; }
-        public float Rating { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public TimeSpan Duration { get; set; }
-        public DateTime AnnouciamentDate { get; set; }
-        public List<Character> Characters { get; set; } = new List<Character>();
-        public List<Genre> Genres { get; set; } = new List<Genre>();
-        public List<Language> Idiomas { get; set; } = new List<Language>();
-        public List<Picture> Gallery { get; set; } = new List<Picture>();
-        public List<Director> Directors { get; set; } = new List<Director>();
-
+        public string Title { get; private set; }
+        public string Synopsis { get; private set; }
+        public string Description { get; private set; }
+        public float? Rating { get; private set; }
+        public DateTime? ReleaseDate { get; private set; }
+        public TimeSpan? Duration { get; private set; }
+        public DateTime? Announcement { get; private set; }
+        public ICollection<Character> Characters { get; private set; } = new List<Character>();
+        public ICollection<Actor> Actors { get; private set; } = new List<Actor>();
+        public ICollection<Genre> Genres { get; private set; } = new List<Genre>();
+        public ICollection<Language> Languages { get; private set; } = new List<Language>();
+        public ICollection<Picture> Pictures { get; private set; } = new List<Picture>();
+        public ICollection<Director> Directors { get; private set; } = new List<Director>();
     }
 }

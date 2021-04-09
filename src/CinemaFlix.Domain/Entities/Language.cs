@@ -1,11 +1,11 @@
-﻿using System;
+﻿using CinemaFlix.Domain.Common;
+using System;
 
 namespace CinemaFlix.Domain.Entities
 {
-    public class Language
+    public class Language : Entity
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Iso_639_1 { get; set; }
+        public string Name { get; private set; }
+        public string Code { get; private set; }
     }
 }

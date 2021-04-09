@@ -1,18 +1,18 @@
-﻿using CinemaFlix.Domain.Enums;
-using System;
+﻿using CinemaFlix.Domain.Common;
+using CinemaFlix.Domain.Enums;
 using System.Collections.Generic;
+using CinemaFlix.Domain.ValueObjects;
 
 namespace CinemaFlix.Domain.Entities
 {
-    public class Actor
+    public class Actor : Entity
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public Gender Gender { get; set; }
-        public int Age { get; set; }
-        public List<Movie> Movies { get; set; } = new List<Movie>();
-        public Picture Picture { get; set; }
-
+        public Name Name { get; private set; }
+        public string Description { get; private set; }
+        public Gender? Gender { get; private set; }
+        public int? Age { get; private set; }
+        public ICollection<Movie> Movies { get; private set; } = new List<Movie>();
+        public ICollection<Picture> Pictures { get; private set; } = new List<Picture>();
+        public ICollection<Character> Characters { get; private set; } = new List<Character>();
     }
 }

@@ -1,14 +1,29 @@
-﻿using System;
+﻿using CinemaFlix.Domain.Common;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using CinemaFlix.Domain.ValueObjects;
 
 namespace CinemaFlix.Domain.Entities
 {
-    public class User
+    public class User : Entity
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public List<Movie> movies { get; set; } = new List<Movie>();
-        public string Email { get; set; }
-        public DateTime CreationDate { get; set; }
+        private readonly IList<Movie> _movies;
+        protected User() { }
+        public User(Name name, Email email)
+        {
+            Name = name;
+            Email = email;
+            _movies = new List<Movie>();
+        }
+        public Name Name { get; private set; }
+        public Email Email { get; private set; }
+        public DateTime? CreationDate { get; private set; } = DateTime.Now;
+        public IReadOnlyCollection<Movie> Movies => _movies.ToArray();
+
+        public void AddMovie(Movie movie)
+        {
+            _movies.Add(movie);
+        }
     }
 }

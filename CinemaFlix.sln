@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaFlix.Api", "src\CinemaFlix.Api\CinemaFlix.Api.csproj", "{90C4C325-9E65-4004-90FE-B5AA1DB1A0EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B6599504-CD04-4742-AFD4-B67ACD4D5AC1}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaFlix.Domain", "src\CinemaFlix.Domain\CinemaFlix.Domain.csproj", "{518D196D-9A6D-4C09-83BF-2B0D3C1D40C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaFlix.Application", "src\CinemaFlix.Application\CinemaFlix.Application.csproj", "{903F8DCE-EC3E-4C3C-84D2-1FB5C114A6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaFlix.Infrastructure", "src\CinemaFlix.Infrastructure\CinemaFlix.Infrastructure.csproj", "{756F6819-4BF0-4E0A-ACD8-0D3D7218D981}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90C4C325-9E65-4004-90FE-B5AA1DB1A0EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C4C325-9E65-4004-90FE-B5AA1DB1A0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C4C325-9E65-4004-90FE-B5AA1DB1A0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C4C325-9E65-4004-90FE-B5AA1DB1A0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518D196D-9A6D-4C09-83BF-2B0D3C1D40C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518D196D-9A6D-4C09-83BF-2B0D3C1D40C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518D196D-9A6D-4C09-83BF-2B0D3C1D40C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518D196D-9A6D-4C09-83BF-2B0D3C1D40C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903F8DCE-EC3E-4C3C-84D2-1FB5C114A6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903F8DCE-EC3E-4C3C-84D2-1FB5C114A6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903F8DCE-EC3E-4C3C-84D2-1FB5C114A6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903F8DCE-EC3E-4C3C-84D2-1FB5C114A6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756F6819-4BF0-4E0A-ACD8-0D3D7218D981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756F6819-4BF0-4E0A-ACD8-0D3D7218D981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756F6819-4BF0-4E0A-ACD8-0D3D7218D981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756F6819-4BF0-4E0A-ACD8-0D3D7218D981}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

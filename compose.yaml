@@ -1,0 +1,6 @@
+﻿services:
+  cinemaflix.api:
+    image: cinemaflix.api
+    build:
+      context: .
+      dockerfile: src/CinemaFlix.Api/Dockerfile

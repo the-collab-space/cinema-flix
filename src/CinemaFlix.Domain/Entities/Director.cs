@@ -8,7 +8,7 @@ public class Director : Entity, IPerson, ICrew
 {
     private readonly List<Movie> _movies = [];
 
-    public Director(Name name, ushort age, ICollection<Movie> movies, DateOnly birthDate, string? description, EGender gender = EGender.NonBinary)
+    public Director(Name name, ushort age, ICollection<Movie> movies, DateOnly birthDate, EGender gender = EGender.NonBinary, string? description = null)
     {
         Name = name;
         Age = age;

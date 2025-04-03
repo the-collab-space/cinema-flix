@@ -20,7 +20,7 @@ public class MovieConfiguration : EntityTypeConfiguration<Movie>
 
         builder.OwnsMany(m => m.Genres)
             .Property(g => g.Name)
-            .HasColumnName("Gender")
+            .HasColumnName("Genre")
             .IsRequired();
     }
 }

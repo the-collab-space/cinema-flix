@@ -8,9 +8,9 @@ public interface IRepository<TEntity> : IDisposable where TEntity : Entity
     Task<List<TEntity>> FindAll();
     Task<TEntity?> FindById(Guid id);
     Task<IEnumerable<TEntity>> Search(Expression<Func<TEntity, bool>> predicate);
-    Task<int> Add(TEntity entity);
+    Task Add(TEntity entity);
     Task AddRange(IEnumerable<TEntity> entities);
-    Task<int> Update(TEntity entity);
-    Task<int> Remove(TEntity entity);
+    Task Update(TEntity entity);
+    Task Remove(TEntity entity);
     Task<int> SaveChanges();
 }

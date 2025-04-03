@@ -9,6 +9,6 @@ public class ActorRepository  : Repository<Actor>, IActorRepository
     {
     }
 
-    public async Task<IEnumerable<Actor>> GetDirectorsPerMovie(Guid movieId)=>
+    public async Task<IEnumerable<Actor>> GetActorsPerMovie(Guid movieId)=>
         await Search(a => a.Movies.AsEnumerable().All(m => m.Id == movieId));
 }

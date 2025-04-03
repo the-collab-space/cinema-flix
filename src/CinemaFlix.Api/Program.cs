@@ -44,8 +44,4 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-if (app.Environment.IsDevelopment())
-{
-}
-
 await app.RunAsync();

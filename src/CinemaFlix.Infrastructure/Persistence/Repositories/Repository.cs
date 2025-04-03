@@ -25,29 +25,13 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
     public async Task<IEnumerable<TEntity>> Search(Expression<Func<TEntity, bool>> predicate) =>
         await DbSet.AsNoTracking().Where(predicate).ToListAsync();
 
-    public async Task<int> Add(TEntity entity)
-    {
-        DbSet.Add(entity);
-        return await SaveChanges();
-    }
+    public async Task Add(TEntity entity) => await DbSet.AddAsync(entity);
 
-    public async Task AddRange(IEnumerable<TEntity> entities)
-    {
-        DbSet.AddRange(entities);
-        await SaveChanges();
-    }
+    public async Task AddRange(IEnumerable<TEntity> entities) => await DbSet.AddRangeAsync(entities);
 
-    public async Task<int> Update(TEntity entity)
-    {
-        DbSet.Update(entity);
-        return await SaveChanges();
-    }
+    public async Task Update(TEntity entity) => await Task.Run(() => DbSet.Update(entity));
 
-    public async Task<int> Remove(TEntity entity)
-    {
-        DbSet.Remove(entity);
-        return await SaveChanges();
-    }
+    public async Task Remove(TEntity entity) => await Task.Run(() => DbSet.Remove(entity));
 
     public async Task<int> SaveChanges() => await Context.SaveChangesAsync();
 

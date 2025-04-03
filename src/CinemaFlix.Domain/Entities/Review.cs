@@ -2,6 +2,10 @@ namespace CinemaFlix.Domain.Entities;
 
 public class Review : Entity
 {
+    private Review()
+    {
+    }
+
     public Review(string description, float rating, Movie movie, User user)
     {
         Description = description;

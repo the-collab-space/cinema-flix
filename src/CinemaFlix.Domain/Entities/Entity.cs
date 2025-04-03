@@ -1,8 +1,10 @@
+using NodaTime;
+
 namespace CinemaFlix.Domain.Entities;
 
 public abstract class Entity
 {
     public Guid Id { get; init; } = Guid.CreateVersion7();
-    public DateTimeOffset CreateDate { get; init; } = DateTimeOffset.Now;
-    public DateTimeOffset? UpdateDate { get; protected set; }
+    public Instant CreateDate { get; init; } = Instant.FromDateTimeOffset(DateTimeOffset.Now);
+    public Instant? UpdateDate { get; protected set; }
 }
